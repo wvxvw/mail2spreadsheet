@@ -1,0 +1,5 @@
+*~
+/build
+/dist
+/mail2spreadsheet.egg-info
+src/mail2spreadsheet/__pycache__
