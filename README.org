@@ -1,15 +1,24 @@
-# client id: 632204739665-kd642bk3k28b6ltol9kqmeo8cs7bnauh.apps.googleusercontent.com 
-# client secret: Q8vGpVQBv0F_Ex2w5IHj526B
-
-
 * Installing
   #+BEGIN_SRC sh
     sudo python ./setup.py install
   #+END_SRC
 
 * Using
+  Open your spreadsheet, let's say it's called /My Spreadsheet/.
+  First time before you run =mail2spreadsheet= you will need to share
+  this spreadsheet with the =client_email=, found in the credentials
+  file (an example is provided in
+  [[./src/mail2spreadsheet/etc/mail2spreadsheet-d54e4b54d3b8.json]], but
+  you can create your own as described here:
+  http://gspread.readthedocs.io/en/latest/oauth2.html
+  
   #+BEGIN_SRC sh
     mail2spreadsheet
     mail2spreadsheet --credentials-file credentials.json \
-                     --spreadsheet https://docs.google.com/spreadsheets/d/${id}
+                     --spreadsheet 'My Spreadsheet' \
+                    '{ "hex": "400af7", "squawk": "1000", ... , "rssi": -27.5 }
   #+END_SRC
+
+* TBD
+  Connect to GMail using IMAP and retrieve some data relevant to the
+  spreadsheet been updated.
