@@ -1,0 +1,7 @@
+#!/usr/bin/env python
+# -*- mode: python -*-
+from mail2spreadsheet.cli import main
+
+
+if __name__ == '__main__':
+    main()

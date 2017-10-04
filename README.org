@@ -1,0 +1,15 @@
+# client id: 632204739665-kd642bk3k28b6ltol9kqmeo8cs7bnauh.apps.googleusercontent.com 
+# client secret: Q8vGpVQBv0F_Ex2w5IHj526B
+
+
+* Installing
+  #+BEGIN_SRC sh
+    sudo python ./setup.py install
+  #+END_SRC
+
+* Using
+  #+BEGIN_SRC sh
+    mail2spreadsheet
+    mail2spreadsheet --credentials-file credentials.json \
+                     --spreadsheet https://docs.google.com/spreadsheets/d/${id}
+  #+END_SRC
